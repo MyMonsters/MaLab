@@ -1,4 +1,16 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service');
 module.exports = defineConfig({
-  transpileDependencies: true
-})
+  transpileDependencies: true,
+  lintOnSave: false, //关闭语法检查
+  devServer: {
+    proxy: {
+      '/apiSohu': {
+        target: 'http://pv.sohu.com/', // localhost=>target
+        pathRewrite: {
+          '/apiSohu': '/',
+        },
+        changeOrigin: true,
+      },
+    },
+  },
+});
