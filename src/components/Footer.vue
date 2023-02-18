@@ -33,34 +33,23 @@
           >渝ICP备2022013486号-1
         </a>
       </div>
-      <!-- <statics /> -->
-      <div class="statics">
-        <div>
-          本站总访问量<span id="busuanzi_value_site_pv" class="showvisit"></span
-          >次
-        </div>
-        <!-- <div>
-          本站总访客数<span id="busuanzi_value_site_uv" class="showvisit"></span
-          >人
-        </div> -->
-        <!-- <div>
-          本站总访客数<span id="busuanzi_value_page_uv" class="showvisit"></span
-          >人
-        </div>
-        <div>
-          本站总访客数<span id="busuanzi_value_page_pv" class="showvisit"></span
-          >人
-        </div> -->
-      </div>
-      <div class="userInfo">{{ ip }} {{ position }}</div>
+    
     </div>
+    <Mymap />
+    <!-- <div class="userInfo">{{ ip }} {{ position }}</div> -->
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
 // import Statics from './Statics.vue';
+
+import Mymap from './Mymap.vue';
 export default {
-  name: 'footerName',
+  name: 'MapName',
+  components: {
+    Mymap,
+  },
   data() {
     return {
       ip: '',
@@ -81,7 +70,7 @@ export default {
 .footer {
   /* background-color: #3f51b5; */
   background-color: #353030;
-  height: 150px;
+  height: 300px;
   width: 100%;
   padding: 20px 0;
   color: white;
@@ -89,6 +78,8 @@ export default {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 .statics {
 }

@@ -3,7 +3,6 @@ import App from './App.vue';
 import 'aos/dist/aos.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import request from './utils/request';
-import { getUserInfo } from './utils/getUserInfo';
 // import globalRegister from './global'
 import { Carousel, CarouselItem } from 'element-ui';
 Vue.use(Carousel).use(CarouselItem);
@@ -18,7 +17,7 @@ import VueI18N from 'vue-i18n';
 Vue.use(VueI18N);
 
 const i18n = new VueI18N({
-  locale: 'zh-CN',
+  locale: 'en-US',
   messages: {
     'zh-CN': require('./i18n/lang/zh'), // 中文语言包
     'en-US': require('./i18n/lang/en'), // 英文语言包
@@ -31,7 +30,7 @@ import router from './router';
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 Vue.prototype.axios = request;
-getUserInfo();
+
 new Vue({
   render: (h) => h(App),
   i18n: i18n,

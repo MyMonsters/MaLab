@@ -1,14 +1,17 @@
 <template>
   <div>
-    <Navigator />
-    <Home />
-    <About />
+    <div class="mycontent">
+      <Navigator />
 
-    <Team />
+      <Home />
+      <About />
 
-    <Experience />
-    <Publications />
-    <Footer />
+      <Team />
+
+      <Experience />
+      <Publications />
+      <Footer />
+    </div>
   </div>
 </template>
 

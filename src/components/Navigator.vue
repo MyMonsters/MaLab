@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="mynav navbar navbar-expand-lg navbar-dark bg-white alt fixed-top"
+      class="mynav navbar navbar-expand-lg navbar-dark bg-light alt fixed-top"
       id="mainNav"
     >
       <div class="container">
@@ -137,11 +137,13 @@
                 $t('m.home')
               }}</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">{{
                 $t('m.about')
               }}</a>
             </li>
+
             <li class="nav-item">
               <!-- <a class="nav-link js-scroll-trigger i18n" href="#portfolio" name="team">{{$t('m.team')}}</a> -->
               <a class="nav-link js-scroll-trigger" href="#team">{{
@@ -160,6 +162,7 @@
             </li>
           </ul>
         </div>
+
         <div class="icon" style="margin-bottom: 2px">
           <svg
             t="1659614396130"
@@ -179,31 +182,98 @@
             ></path>
           </svg>
         </div>
+        <div style="display: flex; align-items: center">
+          <label style="margin-bottom: 0">
+            <input
+              class="toggle-checkbox"
+              type="checkbox"
+              v-model="mode"
+              value="light"
+            />
+            <div class="toggle-slot">
+              <div class="sun-icon-wrapper">
+                <!-- <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div> -->
+                <svg
+                  t="1675836147687"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="2176"
+                  width="1.3em"
+                  height="1.3em"
+                >
+                  <path
+                    d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z"
+                    fill="#FFD878"
+                    p-id="2177"
+                  ></path>
+                  <path
+                    d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z"
+                    fill="#FFE4A9"
+                    p-id="2178"
+                  ></path>
+                  <path
+                    d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z"
+                    fill="#4D5152"
+                    p-id="2179"
+                  ></path>
+                  <path
+                    d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z"
+                    fill="#4D5152"
+                    p-id="2180"
+                  ></path>
+                </svg>
+              </div>
+              <div class="toggle-button"></div>
+              <div class="moon-icon-wrapper">
+                <!-- <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div> -->
+                <svg
+                  t="1675836286421"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="3102"
+                  width="1.3em"
+                  height="1.3em"
+                >
+                  <path
+                    d="M412.216889 185.173333a343.950222 343.950222 0 0 0-11.264 147.740445 340.650667 340.650667 0 0 0 436.451555 278.300444c-38.343111 126.008889-150.300444 223.345778-282.908444 239.502222a340.992 340.992 0 0 1-298.552889-112.469333C190.407111 664.064 160.995556 568.32 173.056 468.650667c16.156444-132.835556 113.322667-245.020444 239.160889-283.420445zM511.146667 56.888889a463.644444 463.644444 0 0 0-62.805334 4.266667c-201.557333 27.306667-363.406222 191.374222-387.982222 393.671111C26.680889 731.704889 241.493333 967.111111 511.146667 967.111111c18.773333 0 37.831111-1.137778 57.059555-3.527111 201.898667-24.632889 365.681778-186.766222 392.931556-388.721778 2.958222-21.788444 4.323556-43.292444 4.266666-64.512-0.113778-33.166222-27.420444-55.296-56.661333-55.296a58.026667 58.026667 0 0 0-34.929778 11.776 225.28 225.28 0 0 1-135.566222 45.112889c-10.695111 0-21.617778-0.739556-32.654222-2.275555-98.531556-13.767111-178.460444-93.809778-192.170667-192.568889a227.384889 227.384889 0 0 1 42.723556-168.561778c23.608889-37.376 1.422222-91.534222-43.463111-91.704889h-1.592889z"
+                    fill=""
+                    p-id="3103"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </label>
+        </div>
       </div>
     </nav>
-    <router-view></router-view>
-    <!-- <Home/>
-    <About/>
-    
-    <Team/>
-    
-    <Experience/>
-    <Publications/>
-    <Contact/> -->
+    <!-- <div class="lantern">
+      <div style="flex: 1"><Lantern word="Happy" /></div>
+      <div style="flex: 1"><Lantern word="New" /></div>
+      <div style="flex: 1"><Lantern word="Year" /></div>
+    </div> -->
+
+    <!-- <div class="mycontent"><router-view></router-view></div> -->
+    <!-- <Home />
+    <About />
+
+    <Team />
+
+    <Experience />
+    <Publications />
+    <Contact /> -->
   </div>
 </template>
 
 <script>
-// import Home from '@/pages/Home.vue';
-// import About from '@/pages/About.vue';
-// import Contact from '@/pages/Contact.vue';
-// import Team from '@/pages/Team.vue';
-// import Experience from '@/pages/Experience.vue';
-
-// require("../assets/css/bootstrap.min.css");
 export default {
-  // components: { Home, About, Team, Experience, Contact },
   name: 'NavigatorName',
+  data() {
+    return {
+      mode: [],
+    };
+  },
   methods: {
     changeLangEvent() {
       if (this.lang === 'zh-CN') {
@@ -212,6 +282,24 @@ export default {
       } else {
         this.lang = 'zh-CN';
         this.$i18n.locale = this.lang; //关键语句
+      }
+    },
+  },
+  watch: {
+    mode(newValue) {
+      console.log(newValue[0] || 'dark');
+      if (newValue[0] && newValue[0] === 'light') {
+        console.log(
+          document
+            .getElementsByClassName('mycontent')[0]
+            .classList.add('dark-mode')
+        );
+      } else {
+        console.log(
+          document
+            .getElementsByClassName('mycontent')[0]
+            .classList.remove('dark-mode')
+        );
       }
     },
   },
@@ -232,5 +320,11 @@ export default {
 
 .nav-item:hover {
   border-bottom: 2px solid black;
+}
+.lantern {
+  display: flex;
+  justify-content: center;
+}
+.container {
 }
 </style>

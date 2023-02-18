@@ -5,7 +5,7 @@
     <el-carousel :autoplay="false" type="card" height="500px">
       <el-carousel-item>
         <img
-          src="https://mystorage-1314929303.cos.ap-chengdu.myqcloud.com/style.jpg"
+          src="https://source.machao.group/style.jpg"
           style="width: 100%"
         />
       </el-carousel-item>
@@ -23,9 +23,6 @@
 <script>
 export default {
   name: 'styleName',
-  mounted() {
-    console.log('dddd');
-  },
 };
 </script>
 

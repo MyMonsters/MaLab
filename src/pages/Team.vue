@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="wt-section bg-light" id="team">
+    <section class="wt-section " id="team">
       <div class="container">
         <div class="row justify-content-md-center text-center pb-lg-5">
           <div class="col-md-12">
@@ -16,11 +16,11 @@
               <img class="img-fluid img-responsive principalImg" src="https://mystorage-1314929303.cos.ap-chengdu.myqcloud.com/ma.jpg" alt="" />
               <div class="overlay">
                 <span class="fancylight popup-btn info" v-if="$i18n.locale == 'zh-CN'" data-fancybox-group="light"
-                  style="text-decoration: none; color: black">马超 <br />
+                  style="text-decoration: none;">马超 <br />
                   {{ $t('m.ma') }}
                 </span>
                 <span class="fancylight popup-btn info" v-else data-fancybox-group="light"
-                  style="text-decoration: none; color: black">Chao Ma<br />
+                  style="text-decoration: none;">Chao Ma<br />
                   {{ $t('m.ma') }}
                 </span>
                 <!-- <router-link target="_blank" to="/ma" class="fancylight popup-btn info" data-fancybox-group="light"
@@ -32,7 +32,7 @@
 
 
                 <p class="fancylight popup-btn info" data-fancybox-group="light"
-                  style="text-decoration: none; color: black">
+                  style="text-decoration: none;">
                   {{ $t('m.email') }}:
                   <a href="mailto:machao@cdut.edu.cn">machao@cdut.edu.cn</a>
                 </p>
@@ -56,13 +56,13 @@
                       <span class="fancylight popup-btn info" v-if="$i18n.locale == 'zh-CN'" data-fancybox-group="light"
                         style="
                           text-decoration: none;
-                          color: black;
+                          
                           font-family: 'Microsoft YaHei';
                         ">{{ item.CNname }}
                         <p style="margin-bottom:0;">{{ item.CNmajor }}</p>
                       </span>
                       <span class="fancylight popup-btn info" v-else data-fancybox-group="light"
-                        style="text-decoration: none; color: black">{{ item.ENname }}
+                        style="text-decoration: none; ">{{ item.ENname }}
                         <p style="margin-bottom:0;">{{ item.ENmajor }}</p>
                       </span>
                       <!-- <router-link target="_blank" :to='item.path' class="fancylight popup-btn info"
@@ -74,14 +74,14 @@
                       <span class="fancylight popup-btn info" v-if="$i18n.locale == 'zh-CN'" data-fancybox-group="light"
                         style="
                           text-decoration: none;
-                          color: black;
+                          
                           font-family: 'Microsoft YaHei';
                           font-size: 15px;
                         ">
                         <p style="margin-bottom:0;">{{ item.CNinterest }}</p>
                       </span>
                       <span class="fancylight popup-btn info" v-else data-fancybox-group="light"
-                        style="text-decoration: none; color: black">
+                        style="text-decoration: none; ">
                         <p style="margin-bottom:0;font-size: 15px;">{{ item.ENinterest }}</p>
                       </span>
                     </div>
@@ -106,14 +106,14 @@
               <div class="overlay">
                 <p>
                   <span v-if="$i18n.locale == 'zh-CN'" target="_blank" class="fancylight popup-btn info"
-                    data-fancybox-group="light" style="text-decoration: none; color: black">{{ item.CNname }}
+                    data-fancybox-group="light" style="text-decoration: none;">{{ item.CNname }}
                     <!-- <i>{{item.Grade}}</i> -->
                     <div class="info-container">
-                      {{ item.CNgrade }}&nbsp;&nbsp; {{ item.CNmajor }}
+                      {{ item.CNgrade }}{{ item.CNmajor }}
                     </div>
                   </span>
                   <span v-else target="_blank" class="fancylight popup-btn info" data-fancybox-group="light"
-                    style="text-decoration: none; color: black">{{ item.ENname }}
+                    style="text-decoration: none; ">{{ item.ENname }}
                     <!-- <i>{{item.Grade}}</i> -->
                     <div class="info-container">
                       <div>{{ item.ENmajor }}</div>
@@ -139,14 +139,14 @@
               <div class="overlay">
                 <p>
                   <span v-if="$i18n.locale == 'zh-CN'" target="_blank" class="fancylight popup-btn info"
-                    data-fancybox-group="light" style="text-decoration: none; color: black">{{ item.CNname }}
+                    data-fancybox-group="light" style="text-decoration: none; ">{{ item.CNname }}
                     <!-- <i>{{item.Grade}}</i> -->
                     <div class="info-container">
-                      {{ item.CNgrade }} &nbsp;&nbsp; {{ item.CNmajor }}
+                      {{ item.CNgrade }}{{ item.CNmajor }}
                     </div>
                   </span>
                   <span v-else target="_blank" class="fancylight popup-btn info" data-fancybox-group="light"
-                    style="text-decoration: none; color: black">{{ item.ENname }}
+                    style="text-decoration: none; ">{{ item.ENname }}
                     <!-- <i>{{item.Grade}}</i> -->
                     <div class="info-container">
                       <div>{{ item.ENmajor }}</div>
@@ -171,14 +171,14 @@
               <div class="overlay">
                 <p>
                   <span target="_blank" v-if="$i18n.locale == 'zh-CN'" class="fancylight popup-btn info"
-                    data-fancybox-group="light" style="text-decoration: none; color: black">{{ item.CNname }}
+                    data-fancybox-group="light" style="text-decoration: none; ">{{ item.CNname }}
                     <!-- <i>{{item.Grade}}</i> -->
                     <div class="info-container">
-                      {{ item.CNgrade }}&nbsp;&nbsp; {{ item.CNmajor }}
+                      {{ item.CNgrade }} {{ item.CNmajor }}
                     </div>
                   </span>
                   <span target="_blank" v-else class="fancylight popup-btn info" data-fancybox-group="light"
-                    style="text-decoration: none; color: black">{{ item.ENname }}
+                    style="text-decoration: none; ">{{ item.ENname }}
                     <!-- <i>{{item.Grade}}</i> -->
                     <div class="info-container">
                       <div>{{ item.ENmajor }}</div>
@@ -213,7 +213,6 @@ export default {
   mounted() {
     this.axios.get('/deeptime/getMembers/1').then((response) => {
       this.TeacherList = response.data.data;
-      console.log(this.TeacherList)
     });
     this.axios.get('/deeptime/getMembers/2').then((response) => {
       this.PHDStudentsList = response.data.data;

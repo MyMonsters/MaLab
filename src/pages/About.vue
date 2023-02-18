@@ -13,7 +13,7 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="https://mystorage-1314929303.cos.ap-chengdu.myqcloud.com/about.jpg"
+                    src="https://source.machao.group/about.jpg"
                     class="d-block w-100"
                     alt="..."
                   />
@@ -32,12 +32,19 @@
         </div>
       </div>
     </section>
+    <section>
+      <news />
+    </section>
   </div>
 </template>
 
 <script>
+import news from './News.vue';
 export default {
   name: 'AboutName',
+  components: {
+    news,
+  },
   data() {
     return {
       ENintroduction: '',
@@ -48,7 +55,6 @@ export default {
     this.axios.get('/deeptime/getIntroduction').then((response) => {
       this.ENintroduction = response.data.data[0].ENintroduction;
       this.CNintroduction = response.data.data[0].CNintroduction;
-      console.log(response.data.data[0].ENintroduction);
     });
   },
   methods: {},

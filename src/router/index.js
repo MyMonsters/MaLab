@@ -16,6 +16,11 @@ export default new VueRouter({
       component: Page,
     },
     {
+      path: '/NewsDetail',
+      component: () => import('@/pages/NewsDetail.vue'),
+      props: true
+    },
+    {
       name: 'team',
       path: '/team',
       component: () => import('@/pages/Team.vue'),

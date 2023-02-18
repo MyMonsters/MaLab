@@ -1,17 +1,19 @@
 <template>
-  <div id="app">
-    <!-- <Home/> -->
+  <div>
+    <div id="app">
+      <!-- <Home/> -->
 
-    <Navigator></Navigator>
-    <!-- <router-view></router-view> -->
-    <!-- <About/>
+      <!-- <Navigator></Navigator> -->
+      <router-view></router-view>
+      <!-- <About/>
     <Experience/>
     
     
     
     <Team/> -->
-    <!-- <Contact/> -->
-    <!-- <Publications/> -->
+      <!-- <Contact/> -->
+      <!-- <Publications/> -->
+    </div>
   </div>
 </template>
 
@@ -48,5 +50,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  white-space: pre-wrap;
+}
+
+/* .toggle-checkbox:checked + .all {
+  background-color: #2f2f2f;
+  width: 100px;
+  height: 200px;
+} */
+#toggle-checkbox {
+  display: none;
 }
 </style>
