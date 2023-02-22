@@ -6,13 +6,9 @@ import request from './utils/request';
 // import globalRegister from './global'
 import { Carousel, CarouselItem } from 'element-ui';
 Vue.use(Carousel).use(CarouselItem);
-// Vue.use(CarouselItem);
 require('./assets/css/styles.css');
-// require("./assets/css/bootstrap.css");
 require('./assets/css/bootstrap.min.css');
-// require("./assets/css/hovereffects.css")
 
-// require("./assets/fonts/iconfont.css")
 import VueI18N from 'vue-i18n';
 Vue.use(VueI18N);
 

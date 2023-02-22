@@ -1,3 +1,5 @@
+// const UploadToCDN = require('@/upload-to-cos');
+const UploadToCDN = require('./src/upload-to-cos');
 const { defineConfig } = require('@vue/cli-service');
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -12,5 +14,8 @@ module.exports = defineConfig({
         changeOrigin: true,
       },
     },
+  },
+  configureWebpack: {
+    plugins: [new UploadToCDN({ filename: 'build' })],
   },
 });
