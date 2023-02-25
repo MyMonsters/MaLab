@@ -6,8 +6,8 @@ const RawSource = require('webpack-sources').RawSource;
 const COS = require('cos-nodejs-sdk-v5');
 const fs = require('fs');
 const cos = new COS({
-  SecretId: 'AKIDLZvYM3hIlFmOwPWkv2CFD7wmZIxVwFRU',
-  SecretKey: 'Lhw7XvDOTSMAsUM5f4MZmuyAHwWyJWdf',
+  SecretId: 'id',
+  SecretKey: 'key',
 });
 
 class UploadToCDN {
