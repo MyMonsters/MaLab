@@ -3,9 +3,9 @@ import App from './App.vue';
 import 'aos/dist/aos.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import request from './utils/request';
-// import globalRegister from './global'
-import { Carousel, CarouselItem } from 'element-ui';
-Vue.use(Carousel).use(CarouselItem);
+import globalRegister from './global/register-element';
+// import { Carousel, CarouselItem } from 'element-ui';
+// Vue.use(Carousel).use(CarouselItem);
 require('./assets/css/styles.css');
 require('./assets/css/bootstrap.min.css');
 
@@ -26,6 +26,7 @@ import router from './router';
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 Vue.prototype.axios = request;
+globalRegister();
 
 new Vue({
   render: (h) => h(App),
