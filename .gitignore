@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-/upload-to-cos
+/src/upload-to-cos
 
 # local env files
 .env.local
